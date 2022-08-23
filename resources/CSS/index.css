@@ -81,7 +81,6 @@ main {
   max-width: 100%;
   border: 0px;
   border-radius: 100px;
-  display: none;
 }
 .imagemagic:hover {
   transform: scaleX(-1);
