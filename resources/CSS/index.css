@@ -7,7 +7,11 @@
 body {
   margin: 0;
   padding: 0;
+<<<<<<< HEAD
   background-image: url(/resources/webAllPage.png);
+=======
+  background-image: url(resources/webAllPage.svg);
+>>>>>>> 2f114907a47de431038ceaf49eb2b6218c8c6a85
   background-size: cover;
 }
 
