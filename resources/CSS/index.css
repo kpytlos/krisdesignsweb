@@ -2,12 +2,14 @@
   box-sizing: border-box;
   border: solid 1px;
   border-color: red;
+  color: aliceblue;
+  font-size: 24px;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background-image: url("../back1.jpg");
+  margin: auto;
+  padding: auto;
 }
 
 /* a {
@@ -27,20 +29,24 @@ body {
   } */
 
 header {
-  color: aliceblue;
+  background-image: url("../back1.jpg");
+  background-position: center;
+  height: 100vh;
   display: grid; /* or inline-grid */
-  grid-template: 1fr / 40% 20% 40%; /*rows*/ /*columns*/ /* can use also minmax() or repeat(3, 1fr) */
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr); /*rows*/ /*columns*/ /* can use also minmax() or repeat(3, 1fr) */
   /* gap: 10px 5px; rows columns (no '/' divider) */
 }
 
 .header-title {
   /* short option*/
-  grid-area: 1 / 1 / span 1 / span 1; /*grid-row-start/grid-column-start/ grid-row-end/grid-column-end */
+  grid-area: 2 / 2 / span 1 / span 1; /*grid-row-start/grid-column-start/ grid-row-end/grid-column-end */
   /* one option is : grid-row: 4 / 6; grid-column: 4 / span 2; */
-
-  display: flex;
+  text-align: center;
+  align-self: center;
+  line-height: 200%;
+  /* display: flex; 
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 
   /*When an item spans multiple rows or columns using these properties, 
     it will also include the gap if any exists. For example, 
@@ -48,38 +54,121 @@ header {
     then the item will have a total height of 210 pixels.*/
 }
 
-.desktop-logo {
+.kris {
+  font-weight: 700;
+  font-size: 50px;
+}
+.welcome {
+  opacity: 50%;
+}
+
+/* .desktop-logo {
   grid-area: 1 / 2 / span 1 / span 1;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
-.navigation {
+/* .navigation {
   grid-area: 1 / 3 / span 1 / span 1;
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
+} */
+
+/* --------------- END OF HEADER ---------------  */
 
 main {
-  height: 500px;
-  display: grid;
-  grid-template: 1fr 1fr / repeat(3, 1fr);
 }
 
-.magic {
-  grid-area: 1 / 2 / span 1 / span 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* --------------- EDIT SECTIONS ---------------  */
+
+.htmlcss {
+  background-color: black;
+  height: 100vh;
+  display: grid;
+  grid-template: 20% 1fr 1fr / repeat(3, 1fr);
+  column-gap: 20px;
 }
+.js {
+  background-color: black;
+  height: 100vh;
+  display: grid;
+  grid-template: 20% 1fr 1fr / repeat(3, 1fr);
+  column-gap: 20px;
+}
+
+.imgproj {
+  max-width: 100%;
+  height: 200px;
+}
+
+/* --------------- HTML PROJECTS ---------------  */
+.sectionHtml {
+  padding-top: 15%;
+  grid-area: 1 / 2 / span 1 / span 1;
+  text-align: center;
+}
+.htmlproject1 {
+  grid-area: 2 / 1 / span 1 / span 1;
+  background-image: url(../html1.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.htmlproject2 {
+  grid-area: 2 / 2 / span 1 / span 1;
+  background-image: url(../html2.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.htmlproject3 {
+  grid-area: 2 / 3 / span 1 / span 1;
+  background-image: url(../html3.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* --------------- JS PROJECTS ---------------  */
+.sectionJs {
+  padding-top: 15%;
+  grid-area: 1 / 2 / span 1 / span 1;
+  text-align: center;
+}
+.jsproject1 {
+  grid-area: 2 / 1 / span 1 / span 1;
+  background-image: url(../js1.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.jsproject2 {
+  grid-area: 2 / 2 / span 1 / span 1;
+  background-image: url(../js2.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.jsproject3 {
+  grid-area: 2 / 3 / span 1 / span 1;
+  background-image: url(../js3.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* ------- NOTHING MORE ---------  */
 
 .imagemagic {
-  grid-area: 2 / 2 / span 1 / span 1;
   max-width: 100%;
-  border: 0px;
-  border-radius: 100px;
 }
 .imagemagic:hover {
   transform: scaleX(-1);
